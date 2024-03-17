@@ -1,0 +1,6 @@
+build/
+dist/
+.DS_Store
+
+__init__.py
+.env
