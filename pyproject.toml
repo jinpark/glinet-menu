@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "glinet"
+version = "0.1.0"
+description = "macos menu bar app to switch wireguard peers"
+authors = ["Jin Park <jin@smugdeveloper.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-glinet = {git = "https://github.com/jinpark/python-glinet.git"}
+py2app = "^0.28.7"
+pyobjc = "^10.1"
+rumps = "^0.4.0"
+chardet = "^5.2.0"
+sentry-sdk = "^1.42.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-pyinstaller-plugin.scripts]
+glinet-wg = "gn/main.py"
