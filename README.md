@@ -11,6 +11,7 @@ This is a very simple macos menubar app that allows you to quickly switch wiregu
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
+  - [Sponsorship](#sponsorship)
   - [License](#license)
 
 ## Installation
@@ -21,9 +22,15 @@ I used [poetry](https://python-poetry.org/) to setup this app. The main dependen
 
 You can run the app after installing the dependencies by running `python main.py`
 
+Or download the compiled app in releases. This hasn't been tested outside my computer (Macbook Air M1) so it might have issues.
+
 ## Contributing
 
 Feel free to report issues and send PRs. 
+
+## Sponsorship
+
+If this project has helped you, feel free to send me a [coffee](https://ko-fi.com/its_jin)
 
 ## License
 

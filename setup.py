@@ -7,6 +7,7 @@ Usage:
 
 from setuptools import setup
 
+APP_NAME='glinet menubar'
 APP = ['main.py']
 DATA_FILES = ['glinet-fav.png']
 OPTIONS = {
@@ -14,6 +15,13 @@ OPTIONS = {
     'argv_emulation': False,
     'plist': {
         'LSUIElement': True,
+        'CFBundleName': APP_NAME,
+        'CFBundleDisplayName': APP_NAME,
+        'CFBundleGetInfoString': "glinet menubar",
+        'CFBundleIdentifier': "net.jinpark.glinet-menubar",
+        'CFBundleVersion': "0.1.2",
+        'CFBundleShortVersionString': "0.1.2",
+        'NSHumanReadableCopyright': u"Copyright © 2024, Jin Park, All Rights Reserved"
     },
     'packages': ['rumps', 'chardet'],
     'includes': ['rumps', 'chardet', 'ipython', 'passlib', 'requests', 'tabulate'],
