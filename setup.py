@@ -15,8 +15,8 @@ OPTIONS = {
     'plist': {
         'LSUIElement': True,
     },
-    'packages': ['rumps', 'gli4py', 'chardet'],
-    'includes': ['rumps', 'gli4py', 'chardet', 'ipython', 'passlib', 'requests', 'tabulate'],
+    'packages': ['rumps', 'chardet'],
+    'includes': ['rumps', 'chardet', 'ipython', 'passlib', 'requests', 'tabulate'],
 }
 
 setup(

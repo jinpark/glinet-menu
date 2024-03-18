@@ -3,6 +3,8 @@ import Foundation
 import json
 import rumps
 rumps.debug_mode(True)
+
+from wrapt_timeout_decorator import *
 import os
 from pyglinet import GlInet
 
@@ -53,6 +55,7 @@ class GlinetWireguardClientChanger(rumps.App):
         else:
             return DEFAULT_CONFIG
 
+    @timeout(2.5)
     def try_login(self):
         if os.path.exists(self.login_password_file):
             password_file = open(self.login_password_file, "r")
