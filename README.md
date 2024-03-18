@@ -2,7 +2,7 @@
 
 This is a very simple macos menubar app that allows you to quickly switch wireguard peers. This was developed so I could switch between free vpn setups I had available when a vpn server was over capacity
 
-![example image](image-1.png)
+![example image](image.png)
 
 ## Table of Contents
 
