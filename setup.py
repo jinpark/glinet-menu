@@ -19,11 +19,11 @@ OPTIONS = {
         'CFBundleDisplayName': APP_NAME,
         'CFBundleGetInfoString': "glinet menubar",
         'CFBundleIdentifier': "net.jinpark.glinet-menubar",
-        'CFBundleVersion': "0.1.2",
-        'CFBundleShortVersionString': "0.1.2",
+        'CFBundleVersion': "0.1.3",
+        'CFBundleShortVersionString': "0.1.3",
         'NSHumanReadableCopyright': u"Copyright © 2024, Jin Park, All Rights Reserved"
     },
-    'packages': ['rumps', 'chardet'],
+    'packages': ['rumps'],
     'includes': ['rumps', 'chardet', 'ipython', 'passlib', 'requests', 'tabulate'],
 }
 

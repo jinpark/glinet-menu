@@ -67,7 +67,7 @@ class GlinetWireguardClientChanger(rumps.App):
                 print('error')
                 print(e)
                 capture_sentry_exception(e)
-                rumps.alert(None, "password or config is incorrect. please check the config or enter password again", icon_path="glinet-fav.png")
+                rumps.alert(None, "password or config is incorrect. please check the config or enter password again")
                 self.reset_menu()
                 return False
             try:
@@ -130,7 +130,7 @@ class GlinetWireguardClientChanger(rumps.App):
     #             self.online = False
 
     def enter_password(self, sender):
-        window = rumps.Window("enter router login password", "Login", default_text="", icon_path="glinet-fav.png")
+        window = rumps.Window("enter router login password", "Login", default_text="")
         window._textfield = AppKit.NSSecureTextField.alloc().initWithFrame_(Foundation.NSMakeRect(0, 0, 200, 25))
         window._alert.setAccessoryView_(window._textfield)
         window._alert.window().setInitialFirstResponder_(window._textfield)
@@ -141,7 +141,7 @@ class GlinetWireguardClientChanger(rumps.App):
             self.try_login()
         except:
             capture_sentry_exception(e)
-            rumps.alert(None, "password or config is incorrect. please try logging in again", icon_path="glinet-fav.png")
+            rumps.alert(None, "password or config is incorrect. please try logging in again")
 
     def update_active_peer_in_menu(self):
         self.current_wg = self.get_current_wg()
@@ -219,7 +219,7 @@ class GlinetWireguardClientChanger(rumps.App):
             print(content)
             with open(self.config_file, 'w') as writefile:
                 writefile.write(content)
-        window = rumps.Window("Modify the url (usually the standard router url but with '/rpc') and the username if you have changed it from root.", "Router Configuration", default_text=content, icon_path="glinet-fav.png")
+        window = rumps.Window("Modify the url (usually the standard router url but with '/rpc') and the username if you have changed it from root.", "Router Configuration", default_text=content)
         # window._textfield = AppKit.NSSecureTextField.alloc().initWithFrame_(Foundation.NSMakeRect(0, 0, 200, 25))
         # window._alert.setAccessoryView_(window._textfield)
         # window._alert.window().setInitialFirstResponder_(window._textfield)
@@ -232,11 +232,11 @@ class GlinetWireguardClientChanger(rumps.App):
             print('save config error')
             print(e)
             print(response.text)
-            rumps.alert(None, "invalid json format. Please try again", icon_path="glinet-fav.png")
+            rumps.alert(None, "invalid json format. Please try again")
             return
     
     def about(self, sender):
-        rumps.alert("Glinet Wireguard Client Changer", "A simple menu bar app to change active wireguard peer on a gl-inet router\nEmail me at jin@smugdeveloper.com if there are any issues!\n", icon_path="glinet-fav.png")
+        rumps.alert("Glinet Wireguard Client Changer", "A simple menu bar app to change active wireguard peer on a gl-inet router\nEmail me at jin@smugdeveloper.com if there are any issues!\n")
 
     def create_setting_menu(self):
         setting_menu = rumps.MenuItem("Settings")
